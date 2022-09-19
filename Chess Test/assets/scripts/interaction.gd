@@ -3,42 +3,50 @@ extends Sprite
 var piece
 var active
 
+# Comment on function purpose.
 func params(piece_reference):
 	piece = piece_reference
 
-func _ready():
-	var alliance
-	var type
+# Comment on function purpose.
+func set_sprite():
+	var sprite_address = []
 	match piece.piece_alliance:
 		0:
-			alliance = "white"
+			sprite_address.append("white")
 		1:
-			alliance = "black"
+			sprite_address.append("black")
 	match piece.piece_type:
 		0:
-			type = "king"
+			sprite_address.append("king")
 		1:
-			type = "queen"
+			sprite_address.append("queen")
 		2:
-			type = "rook"
+			sprite_address.append("rook")
 		3:
-			type = "bishop"
+			sprite_address.append("bishop")
 		4:
-			type = "knight"
+			sprite_address.append("knight")
 		5:
-			type = "pawn"
-	texture = load("res://assets/sprites/pieces/%s/%s.png" % [alliance, type])
+			sprite_address.append("pawn")
+	return sprite_address
+
+# Comment on function purpose.
+func _ready():
+	texture = load("res://assets/sprites/pieces/%s/%s.png" % set_sprite())
 	global_position = Vector2((64 * (piece.piece_position[0] - 1)) + 32, 480 - (64 * (piece.piece_position[1] - 1)))
 
-func temp_func():
+func update_pieece():
 	global_position = Vector2((64 * (piece.piece_position[0] - 1)) + 32, 480 - (64 * (piece.piece_position[1] - 1)))
+# ----- ----- ----- ----- -----
 
+# Comment on function purpose.
 func _input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("ui_click"):
 		active = true
 	if Input.is_action_just_released("ui_click"):
 		active = false
 
+# Comment on function purpose.
 func _physics_process(_delta):
 	if active:
 		self.global_position = get_global_mouse_position()

@@ -7,6 +7,7 @@ func _ready():
 	rng.randomize()
 
 func _input(event):
+	return
 	if event.is_action_pressed("ui_click"):
 		var temp = false
 		match main.alliance_turn:
@@ -97,10 +98,10 @@ func set_promotion_test_board_state():
 # Comment on function purpose.
 func set_en_passant_test_board_state():
 	main.alliance_turn = main.Piece.Alliance.BLACK # next_turn() is called to start with the white.
-	#main.create_piece(main.Piece.Alliance.WHITE, main.Piece.Type.KING,   Vector2(5,1))
+	main.create_piece(main.Piece.Alliance.WHITE, main.Piece.Type.KING,   Vector2(5,1))
 	main.create_piece(main.Piece.Alliance.WHITE, main.Piece.Type.PAWN,   Vector2(5,2))
 	
-	#main.create_piece(main.Piece.Alliance.BLACK, main.Piece.Type.KING,   Vector2(5,8))
+	main.create_piece(main.Piece.Alliance.BLACK, main.Piece.Type.KING,   Vector2(5,8))
 	main.create_piece(main.Piece.Alliance.BLACK, main.Piece.Type.PAWN,   Vector2(4,4))
 	main.update_active_pieces()
 	main.move_record = []

@@ -78,6 +78,13 @@ func get_opponent_alliance(alliance):
 		main.Piece.Alliance.BLACK:
 			return main.Piece.Alliance.WHITE
 
+func get_legal_moves(alliance):
+	match alliance:
+		main.Piece.Alliance.WHITE:
+			return main.white_legal_moves
+		main.Piece.Alliance.BLACK:
+			return main.black_legal_moves
+
 # Comment on function purpose.
 func get_starting_rank(alliance):
 	match alliance:
@@ -85,6 +92,54 @@ func get_starting_rank(alliance):
 			return WHITE_STARTING_RANK 
 		main.Piece.Alliance.BLACK:
 			return BLACK_STARTING_RANK
+
+# Comment on function purpose.
+func compute_symbol(piece):
+		var symbol
+		match piece.piece_type:
+			main.Piece.Type.KING:
+				symbol = "K"
+			main.Piece.Type.QUEEN:
+				symbol = "Q"
+			main.Piece.Type.ROOK:
+				symbol = "R"
+			main.Piece.Type.BISHOP:
+				symbol = "B"
+			main.Piece.Type.KNIGHT:
+				symbol = "N"
+			main.Piece.Type.PAWN:
+				symbol = "P"
+			_:
+				symbol = "-"
+		if piece.piece_alliance == main.Piece.Alliance.WHITE:
+			return symbol.to_upper()
+		elif piece.piece_alliance == main.Piece.Alliance.BLACK:
+			return symbol.to_lower()
+		return symbol
+
+# Comment on function purpose.
+func compute_sprite_address(piece):
+	var sprite_address = []
+	match piece.piece_alliance:
+		0:
+			sprite_address.append("white")
+		1:
+			sprite_address.append("black")
+	match piece.piece_type:
+		0:
+			sprite_address.append("king")
+		1:
+			sprite_address.append("queen")
+		2:
+			sprite_address.append("rook")
+		3:
+			sprite_address.append("bishop")
+		4:
+			sprite_address.append("knight")
+		5:
+			sprite_address.append("pawn")
+	sprite_address = "res://assets/sprites/pieces/%s/%s.png" % sprite_address
+	return load(sprite_address)
 
 # Comment on function purpose.
 func debug_print():
@@ -96,7 +151,7 @@ func debug_print():
 		if position == null:
 			debug_board[index].append("-")
 		else:
-			debug_board[index].append(position.compute_symbol())
+			debug_board[index].append(compute_symbol(position))
 	for line in debug_board:
 		print(line)
 	print()

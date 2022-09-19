@@ -29,38 +29,35 @@ class Piece:
 	# Abstract function for sub-classes to override.
 	func compile_pseudo_moves() -> Array:
 		return []
-	
-	# TODO: Implement a permanent function 
-	func compute_symbol():
-		var symbol
-		match self.piece_type:
-			Type.KING:
-				symbol = "K"
-			Type.QUEEN:
-				symbol = "Q"
-			Type.ROOK:
-				symbol = "R"
-			Type.BISHOP:
-				symbol = "B"
-			Type.KNIGHT:
-				symbol = "N"
-			Type.PAWN:
-				symbol = "P"
-			_:
-				symbol = "-"
-		if self.piece_alliance == Alliance.WHITE:
-			return symbol.to_upper()
-		elif self.piece_alliance == Alliance.BLACK:
-			return symbol.to_lower()
-		return symbol
 	# ----- ----- ----- ----- -----
 	
 	# Blueprint for a king chess piece's behavior.
 	class King extends Piece:
 		# Member Variables!
+		const VALUE := 10000
 		const MOVEMENT := [Vector2(-1, -1), Vector2(-1, 0), Vector2(-1, 1), 
 						   Vector2(0, -1),  Vector2(0, 1), 
 						   Vector2(1, -1),  Vector2(1, 0),  Vector2(1, 1)]
+		const WHITE_LOCATION_BONUS_MAP = [
+			[ 20,  30,  10,   0,   0,  10,  30,  20],
+			[ 20,  20,   0,   0,   0,   0,  20,  20],
+			[-10, -20, -20, -20, -20, -20, -20, -10],
+			[-20, -30, -30, -40, -40, -30, -30, -20],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+		]
+		const BLACK_LOCATION_BONUS_MAP = [
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-30, -40, -40, -50, -50, -40, -40, -30],
+			[-20, -30, -30, -40, -40, -30, -30, -20],
+			[-10, -20, -20, -20, -20, -20, -20, -10],
+			[ 20,  20,   0,   0,   0,   0,  20,  20],
+			[ 20,  30,  10,   0,   0,  10,  30,  20],
+		]
 		# ----- ----- ----- ----- -----
 		
 		# Initializes an instance of the King class, calling the super-class constructor.
@@ -88,6 +85,15 @@ class Piece:
 					continue
 			pseudo_moves.append_array(check_king_castling())
 			return pseudo_moves
+		
+		# Comment on function purpose.
+		func return_location_bonus():
+			if self.piece_alliance == Alliance.WHITE:
+				return WHITE_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
+			elif self.piece_alliance == Alliance.BLACK:
+				return BLACK_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
 		
 		# Helper function to compile_pseudo_moves(), which returns special-case castling moves.
 		func check_king_castling() -> Array:
@@ -150,9 +156,30 @@ class Piece:
 	# Blueprint for a queen chess piece's behavior.
 	class Queen extends Piece:
 		# Member Variables!
+		const VALUE := 900
 		const MOVEMENT := [Vector2(-1, -1), Vector2(-1, 0), Vector2(-1, 1), 
 						   Vector2(0, -1),  Vector2(0, 1), 
 						   Vector2(1, -1),  Vector2(1, 0),  Vector2(1, 1)]
+		const WHITE_LOCATION_BONUS_MAP = [
+			[-20, -10, -10,  -5,  -5, -10, -10, -20],
+			[-10,   0,   5,   0,   0,   0,   0, -10],
+			[-10,   5,   5,   5,   5,   5,   0, -10],
+			[  0,   0,   5,   5,   5,   5,   0,  -5],
+			[ -5,   0,   5,   5,   5,   5,   0,  -5],
+			[-10,   0,   5,   5,   5,   5,   0, -10],
+			[-10,   0,   0,   0,   0,   0,   0, -10],
+			[-20, -10, -10,  -5,  -5, -10, -10, -20],
+		]
+		const BLACK_LOCATION_BONUS_MAP = [
+			[-20, -10, -10,  -5,  -5, -10, -10, -20],
+			[-10,   0,   0,   0,   0,   0,   0, -10],
+			[-10,   0,   5,   5,   5,   5,   0, -10],
+			[ -5,   0,   5,   5,   5,   5,   0,  -5],
+			[  0,   0,   5,   5,   5,   5,   0,  -5],
+			[-10,   5,   5,   5,   5,   5,   0, -10],
+			[-10,   0,   5,   0,   0,   0,   0, -10],
+			[-20, -10, -10,  -5,  -5, -10, -10, -20],
+		]
 		# ----- ----- ----- ----- -----
 		
 		# Initializes an instance of the Queen class, calling the super-class constructor.
@@ -180,14 +207,44 @@ class Piece:
 					else:
 						break
 			return pseudo_moves
+		
+		# Comment on function purpose.
+		func return_location_bonus():
+			if self.piece_alliance == Alliance.WHITE:
+				return WHITE_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
+			elif self.piece_alliance == Alliance.BLACK:
+				return BLACK_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
 	# ----- ----- ----- ----- -----
 	
 	# Blueprint for a rook chess piece's behavior.
 	class Rook extends Piece:
 		# Member Variables!
+		const VALUE := 500
 		const MOVEMENT := [Vector2(-1, 0),
 						   Vector2(0, -1),  Vector2(0, 1), 
 						   Vector2(1, 0)]
+		const WHITE_LOCATION_BONUS_MAP = [
+			[ 0,  0,  0,  5,  5,  0,  0,  0],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[ 5, 20, 20, 20, 20, 20, 20,  5],
+			[ 0,  0,  0,  0,  0,  0,  0,  0],
+		]
+		const BLACK_LOCATION_BONUS_MAP = [
+			[ 0,  0,  0,  0,  0,  0,  0,  0],
+			[ 5, 20, 20, 20, 20, 20, 20,  5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[-5,  0,  0,  0,  0,  0,  0, -5],
+			[ 0,  0,  0,  5,  5,  0,  0,  0],
+		]
 		# ----- ----- ----- ----- -----
 		
 		# Initializes an instance of the Rook class, calling the super-class constructor.
@@ -215,13 +272,43 @@ class Piece:
 					else:
 						break
 			return pseudo_moves
+		
+		# Comment on function purpose.
+		func return_location_bonus():
+			if self.piece_alliance == Alliance.WHITE:
+				return WHITE_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
+			elif self.piece_alliance == Alliance.BLACK:
+				return BLACK_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
 	# ----- ----- ----- ----- -----
 	
 	# Blueprint for a bishop chess piece's behavior.
 	class Bishop extends Piece:
+		const VALUE := 330
 		# Member Variables!
 		const MOVEMENT := [Vector2(-1, -1), Vector2(-1, 1), 
 						   Vector2(1, -1),  Vector2(1, 1)]
+		const WHITE_LOCATION_BONUS_MAP = [
+			[-20, -10, -10, -10, -10, -10, -10, -20],
+			[-10,   5,   0,  0,    0,   0,   5, -10],
+			[-10,  10,  10, 10,   10,  10,  10, -10],
+			[-10,   0,  10, 10,   10,  10,   0, -10],
+			[-10,   5,   5, 10,   10,   5,   5, -10],
+			[-10,   0,   5, 10,   10,   5,   0, -10],
+			[-10,   0,   0,  0,    0,   0,   0, -10],
+			[-20, -10, -10, -10, -10, -10, -10, -20],
+		]
+		const BLACK_LOCATION_BONUS_MAP = [
+			[-20, -10, -10, -10, -10, -10, -10, -20],
+			[-10,   0,   0,  0,    0,   0,   0, -10],
+			[-10,   0,   5, 10,   10,   5,   0, -10],
+			[-10,   5,   5, 10,   10,   5,   5, -10],
+			[-10,   0,  10, 10,   10,  10,   0, -10],
+			[-10,  10,  10, 10,   10,  10,  10, -10],
+			[-10,   5,   0,  0,    0,   0,   5, -10],
+			[-20, -10, -10, -10, -10, -10, -10, -20],
+		]
 		# ----- ----- ----- ----- -----
 		
 		# Initializes an instance of the Bishop class, calling the super-class constructor.
@@ -249,15 +336,45 @@ class Piece:
 					else:
 						break
 			return pseudo_moves
+		
+		# Comment on function purpose.
+		func return_location_bonus():
+			if self.piece_alliance == Alliance.WHITE:
+				return WHITE_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
+			elif self.piece_alliance == Alliance.BLACK:
+				return BLACK_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
 	# ----- ----- ----- ----- -----
 	
 	# Blueprint for a knight chess piece's behavior.
 	class Knight extends Piece:
 		# Member Variables!
+		const VALUE := 300
 		const MOVEMENT := [Vector2(-2, -1), Vector2(-2, 1), 
 						   Vector2(-1, -2), Vector2(-1, 2), 
 						   Vector2(1, -2),  Vector2(1, 2),
 						   Vector2(2, -1),  Vector2(2, 1)]
+		const WHITE_LOCATION_BONUS_MAP = [
+			[-50, -40, -30, -30, -30, -30, -40, -50],
+			[-40, -20,   0,   5,   5,   0, -20, -40],
+			[-30,   5,  10,  15,  15,  10,   5, -30],
+			[-30,   0,  15,  20,  20,  15,   0, -30],
+			[-30,   5,  15,  20,  20,  15,   5, -30],
+			[-30,   0,  10,  15,  15,  10,   0, -30],
+			[-40, -20,   0,   0,   0,   0, -20, -40],
+			[-50, -40, -30, -30, -30, -30, -40, -50],
+		]
+		const BLACK_LOCATION_BONUS_MAP = [
+			[-50, -40, -30, -30, -30, -30, -40, -50],
+			[-40, -20,   0,   0,   0,   0, -20, -40],
+			[-30,   0,  10,  15,  15,  10,   0, -30],
+			[-30,   5,  15,  20,  20,  15,   5, -30],
+			[-30,   0,  15,  20,  20,  15,   0, -30],
+			[-30,   5,  10,  15,  15,  10,   5, -30],
+			[-40, -20,   0,   5,   5,   0, -20, -40],
+			[-50, -40, -30, -30, -30, -30, -40, -50],
+		]
 		# ----- ----- ----- ----- -----
 		
 		# Initializes an instance of the Knight class, calling the super-class constructor.
@@ -284,14 +401,44 @@ class Piece:
 				else:
 					continue
 			return pseudo_moves
+		
+		# Comment on function purpose.
+		func return_location_bonus():
+			if self.piece_alliance == Alliance.WHITE:
+				return WHITE_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
+			elif self.piece_alliance == Alliance.BLACK:
+				return BLACK_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
 	# ----- ----- ----- ----- -----
 	
 	# Blueprint for a pawn chess piece's behavior.
 	class Pawn extends Piece:
 		# Member Variables!
+		const VALUE := 100
 		var HEADING #: int
 		const MOVEMENT := [Vector2(0, 1)]
 		const CAPTURE  := [Vector2(-1, 1), Vector2(1, 1)]
+		const WHITE_LOCATION_BONUS_MAP = [
+			[ 0,  0,   0,   0,  0,   0,   0,  0],
+			[ 5, 10,  10, -20, -20,  10, 10,  5],
+			[ 5, -5, -10,   0,   0, -10, -5,  5],
+			[ 0,  0,   0,  20,  20,   0,  0,  0],
+			[ 5,  5,  10,  55,  55,  10,  5,  5],
+			[25, 25,  29,  29,  29,  29, 25, 25],
+			[75, 75,  75,  75,  75,  75, 75, 75],
+			[ 0,  0,   0,   0,   0,   0,  0,  0],
+		]
+		const BLACK_LOCATION_BONUS_MAP = [
+			[ 0,  0,   0,   0,   0,   0,  0,  0],
+			[75, 75,  75,  75,  75,  75, 75, 75],
+			[25, 25,  29,  29,  29,  29, 25, 25],
+			[ 5,  5,  10,  55,  55,  10,  5,  5],
+			[ 0,  0,   0,  20,  20,   0,  0,  0],
+			[ 5, -5, -10,   0,   0, -10, -5,  5],
+			[ 5, 10,  10, -20, -20,  10, 10,  5],
+			[ 0,  0,   0,   0,  0,   0,   0,  0],
+		]
 		# ----- ----- ----- ----- -----
 		
 		# Initializes an instance of the Pawn class, calling the super-class constructor.
@@ -328,6 +475,15 @@ class Piece:
 			pseudo_moves.append_array(check_pawn_double_jump())
 			pseudo_moves.append_array(check_pawn_en_passant())
 			return pseudo_moves
+		
+		# Comment on function purpose.
+		func return_location_bonus():
+			if self.piece_alliance == Alliance.WHITE:
+				return WHITE_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
+			elif self.piece_alliance == Alliance.BLACK:
+				return BLACK_LOCATION_BONUS_MAP[self.piece_position[0] - 1][
+												self.piece_position[1] - 1]
 		
 		# Helper function to compile_pseudo_moves(), which returns special-case promotion moves.
 		func check_pawn_promotion(move_type, candidate_destination) -> Array:
