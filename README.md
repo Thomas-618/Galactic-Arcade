@@ -1,1 +1,1 @@
-# KU-Comp
+# Galatic Arcade
