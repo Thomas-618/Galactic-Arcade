@@ -11,8 +11,8 @@ config_version=4
 [application]
 
 config/name="Chess ProtoType"
-run/main_scene="res://assets/chess.tscn"
-config/icon="res://assets/misc/icon.png"
+run/main_scene="res://main.tscn"
+config/icon="res://misc/icon.png"
 
 [debug]
 
@@ -45,4 +45,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://assets/misc/default_env.tres"
+environment/default_environment="res://misc/default_env.tres"
