@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://checkers/assets/sprites/pieces/black/king.png" type="Texture" id=1]
+[ext_resource path="res://checkers/assets/scripts/piece_gui.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="Piece_Gui" type="Sprite"]
+position = Vector2( 224, 480 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+script = ExtResource( 2 )
+
+[node name="Area_2D" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Area_2D"]
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="Area_2D" to="." method="_input_event"]

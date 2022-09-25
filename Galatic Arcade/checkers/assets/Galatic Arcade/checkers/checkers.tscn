@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://checkers/assets/scripts/piece.gd" type="Script" id=1]
+[ext_resource path="res://checkers/assets/scripts/main.gd" type="Script" id=2]
+[ext_resource path="res://checkers/assets/scripts/move.gd" type="Script" id=3]
+[ext_resource path="res://checkers/assets/scripts/test.gd" type="Script" id=4]
+[ext_resource path="res://checkers/assets/scripts/util.gd" type="Script" id=5]
+[ext_resource path="res://checkers/assets/scenes/board.tscn" type="PackedScene" id=6]
+
+[node name="Checkers" type="Node"]
+
+[node name="Logic" type="Node" parent="."]
+
+[node name="Main" type="Node" parent="Logic"]
+script = ExtResource( 2 )
+
+[node name="Move" type="Node" parent="Logic"]
+script = ExtResource( 3 )
+
+[node name="Piece" type="Node" parent="Logic"]
+script = ExtResource( 1 )
+
+[node name="Test" type="Node" parent="Logic"]
+script = ExtResource( 4 )
+
+[node name="Util" type="Node" parent="Logic"]
+script = ExtResource( 5 )
+
+[node name="Board" parent="." instance=ExtResource( 6 )]
+
+[node name="Pieces" type="Node2D" parent="."]
