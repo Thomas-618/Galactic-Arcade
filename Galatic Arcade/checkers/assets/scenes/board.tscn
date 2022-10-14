@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://chess/assets/themes/dark_square.tres" type="Theme" id=1]
-[ext_resource path="res://chess/assets/themes/light_square.tres" type="Theme" id=2]
-[ext_resource path="res://chess/assets/sprites/indicators/focus.png" type="Texture" id=3]
-[ext_resource path="res://chess/assets/sprites/indicators/hint.png" type="Texture" id=4]
-[ext_resource path="res://chess/assets/sprites/indicators/attention.png" type="Texture" id=5]
+[ext_resource path="res://checkers/assets/themes/dark_square.tres" type="Theme" id=1]
+[ext_resource path="res://checkers/assets/themes/light_square.tres" type="Theme" id=2]
+[ext_resource path="res://checkers/assets/sprites/indicators/attention.png" type="Texture" id=3]
+[ext_resource path="res://checkers/assets/sprites/indicators/focus.png" type="Texture" id=4]
+[ext_resource path="res://checkers/assets/sprites/indicators/hint.png" type="Texture" id=5]
 
 [node name="Board" type="GridContainer"]
 anchor_right = 1.0
@@ -48,7 +48,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/8/Texture"]
 visible = false
@@ -56,13 +56,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="1"]
 margin_top = 64.0
@@ -88,7 +88,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/7/Texture"]
 visible = false
@@ -96,13 +96,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="1"]
 margin_top = 128.0
@@ -128,7 +128,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/6/Texture"]
 visible = false
@@ -136,13 +136,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="1"]
 margin_top = 192.0
@@ -168,7 +168,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/5/Texture"]
 visible = false
@@ -176,13 +176,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="1"]
 margin_top = 256.0
@@ -208,7 +208,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/4/Texture"]
 visible = false
@@ -216,13 +216,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="1"]
 margin_top = 320.0
@@ -248,7 +248,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/3/Texture"]
 visible = false
@@ -256,13 +256,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="1"]
 margin_top = 384.0
@@ -288,7 +288,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/2/Texture"]
 visible = false
@@ -296,13 +296,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="1"]
 margin_top = 448.0
@@ -328,7 +328,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="1/1/Texture"]
 visible = false
@@ -336,13 +336,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="1/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="VBoxContainer" parent="."]
 margin_left = 64.0
@@ -376,7 +376,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/8/Texture"]
 visible = false
@@ -384,13 +384,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="2"]
 margin_top = 64.0
@@ -416,7 +416,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/7/Texture"]
 visible = false
@@ -424,13 +424,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="2"]
 margin_top = 128.0
@@ -456,7 +456,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/6/Texture"]
 visible = false
@@ -464,13 +464,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="2"]
 margin_top = 192.0
@@ -496,7 +496,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/5/Texture"]
 visible = false
@@ -504,13 +504,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="2"]
 margin_top = 256.0
@@ -536,7 +536,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/4/Texture"]
 visible = false
@@ -544,13 +544,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="2"]
 margin_top = 320.0
@@ -576,7 +576,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/3/Texture"]
 visible = false
@@ -584,13 +584,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="2"]
 margin_top = 384.0
@@ -616,7 +616,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/2/Texture"]
 visible = false
@@ -624,13 +624,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="2"]
 margin_top = 448.0
@@ -656,7 +656,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="2/1/Texture"]
 visible = false
@@ -664,13 +664,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="2/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="VBoxContainer" parent="."]
 margin_left = 128.0
@@ -704,7 +704,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/8/Texture"]
 visible = false
@@ -712,13 +712,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="3"]
 margin_top = 64.0
@@ -744,7 +744,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/7/Texture"]
 visible = false
@@ -752,13 +752,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="3"]
 margin_top = 128.0
@@ -784,7 +784,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/6/Texture"]
 visible = false
@@ -792,13 +792,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="3"]
 margin_top = 192.0
@@ -824,7 +824,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/5/Texture"]
 visible = false
@@ -832,13 +832,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="3"]
 margin_top = 256.0
@@ -864,7 +864,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/4/Texture"]
 visible = false
@@ -872,13 +872,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="3"]
 margin_top = 320.0
@@ -904,7 +904,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/3/Texture"]
 visible = false
@@ -912,13 +912,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="3"]
 margin_top = 384.0
@@ -944,7 +944,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/2/Texture"]
 visible = false
@@ -952,13 +952,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="3"]
 margin_top = 448.0
@@ -984,7 +984,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="3/1/Texture"]
 visible = false
@@ -992,13 +992,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="3/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="VBoxContainer" parent="."]
 margin_left = 192.0
@@ -1032,7 +1032,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/8/Texture"]
 visible = false
@@ -1040,13 +1040,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="4"]
 margin_top = 64.0
@@ -1072,7 +1072,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/7/Texture"]
 visible = false
@@ -1080,13 +1080,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="4"]
 margin_top = 128.0
@@ -1112,7 +1112,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/6/Texture"]
 visible = false
@@ -1120,13 +1120,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="4"]
 margin_top = 192.0
@@ -1152,7 +1152,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/5/Texture"]
 visible = false
@@ -1160,13 +1160,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="4"]
 margin_top = 256.0
@@ -1192,7 +1192,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/4/Texture"]
 visible = false
@@ -1200,13 +1200,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="4"]
 margin_top = 320.0
@@ -1232,7 +1232,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/3/Texture"]
 visible = false
@@ -1240,13 +1240,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="4"]
 margin_top = 384.0
@@ -1272,7 +1272,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/2/Texture"]
 visible = false
@@ -1280,13 +1280,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="4"]
 margin_top = 448.0
@@ -1312,7 +1312,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="4/1/Texture"]
 visible = false
@@ -1320,13 +1320,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="4/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="VBoxContainer" parent="."]
 margin_left = 256.0
@@ -1360,7 +1360,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/8/Texture"]
 visible = false
@@ -1368,13 +1368,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="5"]
 margin_top = 64.0
@@ -1400,7 +1400,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/7/Texture"]
 visible = false
@@ -1408,13 +1408,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="5"]
 margin_top = 128.0
@@ -1440,7 +1440,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/6/Texture"]
 visible = false
@@ -1448,13 +1448,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="5"]
 margin_top = 192.0
@@ -1480,7 +1480,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/5/Texture"]
 visible = false
@@ -1488,13 +1488,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="5"]
 margin_top = 256.0
@@ -1520,7 +1520,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/4/Texture"]
 visible = false
@@ -1528,13 +1528,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="5"]
 margin_top = 320.0
@@ -1560,7 +1560,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/3/Texture"]
 visible = false
@@ -1568,13 +1568,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="5"]
 margin_top = 384.0
@@ -1600,7 +1600,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/2/Texture"]
 visible = false
@@ -1608,13 +1608,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="5"]
 margin_top = 448.0
@@ -1640,7 +1640,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="5/1/Texture"]
 visible = false
@@ -1648,13 +1648,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="5/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="VBoxContainer" parent="."]
 margin_left = 320.0
@@ -1688,7 +1688,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/8/Texture"]
 visible = false
@@ -1696,13 +1696,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="6"]
 margin_top = 64.0
@@ -1728,7 +1728,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/7/Texture"]
 visible = false
@@ -1736,13 +1736,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="6"]
 margin_top = 128.0
@@ -1768,7 +1768,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/6/Texture"]
 visible = false
@@ -1776,13 +1776,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="6"]
 margin_top = 192.0
@@ -1808,7 +1808,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/5/Texture"]
 visible = false
@@ -1816,13 +1816,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="6"]
 margin_top = 256.0
@@ -1848,7 +1848,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/4/Texture"]
 visible = false
@@ -1856,13 +1856,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="6"]
 margin_top = 320.0
@@ -1888,7 +1888,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/3/Texture"]
 visible = false
@@ -1896,13 +1896,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="6"]
 margin_top = 384.0
@@ -1928,7 +1928,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/2/Texture"]
 visible = false
@@ -1936,13 +1936,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="6"]
 margin_top = 448.0
@@ -1968,7 +1968,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="6/1/Texture"]
 visible = false
@@ -1976,13 +1976,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="6/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="VBoxContainer" parent="."]
 margin_left = 384.0
@@ -2016,7 +2016,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/8/Texture"]
 visible = false
@@ -2024,13 +2024,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="7"]
 margin_top = 64.0
@@ -2056,7 +2056,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/7/Texture"]
 visible = false
@@ -2064,13 +2064,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="7"]
 margin_top = 128.0
@@ -2096,7 +2096,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/6/Texture"]
 visible = false
@@ -2104,13 +2104,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="7"]
 margin_top = 192.0
@@ -2136,7 +2136,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/5/Texture"]
 visible = false
@@ -2144,13 +2144,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="7"]
 margin_top = 256.0
@@ -2176,7 +2176,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/4/Texture"]
 visible = false
@@ -2184,13 +2184,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="7"]
 margin_top = 320.0
@@ -2216,7 +2216,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/3/Texture"]
 visible = false
@@ -2224,13 +2224,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="7"]
 margin_top = 384.0
@@ -2256,7 +2256,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/2/Texture"]
 visible = false
@@ -2264,13 +2264,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="7"]
 margin_top = 448.0
@@ -2296,7 +2296,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="7/1/Texture"]
 visible = false
@@ -2304,13 +2304,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="7/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="8" type="VBoxContainer" parent="."]
 margin_left = 448.0
@@ -2344,7 +2344,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/8/Texture"]
 visible = false
@@ -2352,13 +2352,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/8/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="7" type="Button" parent="8"]
 margin_top = 64.0
@@ -2384,7 +2384,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/7/Texture"]
 visible = false
@@ -2392,13 +2392,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/7/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="6" type="Button" parent="8"]
 margin_top = 128.0
@@ -2424,7 +2424,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/6/Texture"]
 visible = false
@@ -2432,13 +2432,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/6/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="5" type="Button" parent="8"]
 margin_top = 192.0
@@ -2464,7 +2464,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/5/Texture"]
 visible = false
@@ -2472,13 +2472,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/5/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="4" type="Button" parent="8"]
 margin_top = 256.0
@@ -2504,7 +2504,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/4/Texture"]
 visible = false
@@ -2512,13 +2512,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/4/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="3" type="Button" parent="8"]
 margin_top = 320.0
@@ -2544,7 +2544,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/3/Texture"]
 visible = false
@@ -2552,13 +2552,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/3/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="2" type="Button" parent="8"]
 margin_top = 384.0
@@ -2584,7 +2584,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/2/Texture"]
 visible = false
@@ -2592,13 +2592,13 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/2/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="1" type="Button" parent="8"]
 margin_top = 448.0
@@ -2624,7 +2624,7 @@ __meta__ = {
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="hint_indicator" type="TextureRect" parent="8/1/Texture"]
 visible = false
@@ -2632,10 +2632,10 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 48.0
 margin_bottom = 48.0
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="attention_indicator" type="TextureRect" parent="8/1/Texture"]
 visible = false
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )

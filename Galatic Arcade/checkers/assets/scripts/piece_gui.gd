@@ -44,7 +44,11 @@ func _input_event(_viewport, _event, _shape_idx):
 func _physics_process(_delta):
 	if active:
 		self.global_position = get_global_mouse_position()
-		main.activate_focus([translate_coord(global_position)])
+		main.activate_focus([translate_coord(self.global_position)])
+		if self.global_position[0] < 364 or self.global_position[0] > 912:
+			main.activate_focus([])
+		if self.global_position[1] > 616 or self.global_position[1] < 88:
+			main.activate_focus([])
 # ----- ----- ----- ----- -----
 
 # Updates the GUI to correspond with the internal main.board_state.
@@ -71,10 +75,10 @@ func prompt_move():
 
 # Translates a position within the main.board_state into coordinates on the screen.
 func translate_position(position) -> Vector2:
-	return Vector2((64 * position[0]) - 32, 544 - (64 * position[1]))
+	return Vector2(((64 * position[0]) - 32) + 384, (544 - (64 * position[1])) + 104)
 
 # Translates a coordinate on the screen into a position within the main.board_state.
 func translate_coord(coord) -> Vector2:
-	return Vector2(clamp(int(round((coord[0] + 32) / 64)), 1, 8), 
-				   clamp(int(round((544 - coord[1]) / 64)), 1, 8))
+	return Vector2(clamp(int(round(((coord[0] - 384) + 32) / 64)), 1, 8), 
+				   clamp(int(round((544 - (coord[1] - 96)) / 64)), 1, 8))
 # ----- ----- ----- ----- -----

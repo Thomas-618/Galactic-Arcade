@@ -28,15 +28,15 @@ class Piece:
 		return []
 	# ----- ----- ----- ----- -----
 	
-	# Blueprint for a king chess piece's behavior.
-	class King extends Piece:
+	# Blueprint for a king checker piece's behavior.
+	class King extends Piece:                                                                                                
 		const MOVEMENT := [Vector2(-1, -1), Vector2(1, -1), Vector2(-1, 1), Vector2(1, 1)]
 		
 		func _init(main = null, piece_gui = null, 
 				   piece_alliance = null, piece_position = null):
 			._init(main, piece_gui, piece_alliance, Type.KING, piece_position)
 		
-		# Utilizes the MOVEMENT + CAPTURE constants to return a list of pseudo-legal moves.
+		# Utilizes the MOVEMENT constants to return a list of pseudo-legal moves.
 		func compile_moves() -> Array:
 			var captures = []
 			var moves = []
@@ -64,10 +64,10 @@ class Piece:
 			return [captures, moves]
 	# ----- ----- ----- ----- -----
 	
-	# Blueprint for a pawn chess piece's behavior.
-	class Pawn extends Piece:
+	# Blueprint for a pawn checker piece's behavior.
+	class Pawn extends Piece:                                                                                                      
 		const MOVEMENT := [Vector2(-1, 1), Vector2(1, 1)]
-		var HEADING #: int
+		var HEADING 
 		
 		func _init(main = null, piece_gui = null, 
 				   piece_alliance = null, piece_position = null):
@@ -77,7 +77,7 @@ class Piece:
 			elif self.piece_alliance == Alliance.RED:
 				self.HEADING = -1
 		
-		# Utilizes the MOVEMENT + CAPTURE constants to return a list of pseudo-legal moves.
+		# Utilizes the MOVEMENT constants to return a list of pseudo-legal moves.
 		func compile_moves() -> Array:
 			var captures = []
 			var moves = []
